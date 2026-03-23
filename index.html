@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giving Day — UChicago Engineering Clubs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand">Student Engineering @ UChicago</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#clubs">Clubs</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#donate" class="nav-cta">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero-wrapper">
+  <header class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="container hero-content">
+      <div class="hero-logo hero-anim">
+        <img src="assets/images/uc_givingday_logo.png" alt="UChicago Giving Day" class="hero-logo-img">
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-anim">Giving Day 2026</h1>
+        <p class="hero-subtitle hero-anim">Support Student Engineering at the University of Chicago</p>
+
+        <div class="hero-countdown hero-anim" id="countdown">
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-days">--</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-hours">--</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-mins">--</span>
+            <span class="countdown-label">Min</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-secs">--</span>
+            <span class="countdown-label">Sec</span>
+          </div>
+        </div>
+
+        <a href="#donate" class="btn btn-primary hero-anim">Make a Gift</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="progress-section">
+    <div class="container">
+      <div class="hero-progress">
+        <div class="progress-header">
+          <span class="progress-raised" id="progress-raised">$0</span>
+          <span class="progress-goal">of <strong>$10,000</strong> goal</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-donors" id="progress-donors">0 donors</p>
+      </div>
+    </div>
+  </section>
+
+  <a href="#mission" class="scroll-indicator" aria-label="Scroll to Why Give">
+    <span class="scroll-chevron"></span>
+  </a>
+  </div>
+
+  <section id="mission" class="section">
+    <div class="container">
+      <h2 class="reveal">Why Give?</h2>
+      <p class="reveal reveal-delay-1">
+        Your contribution directly funds student-led engineering projects, competition travel,
+        equipment, and workshop materials. Every dollar makes a difference.
+      </p>
+    </div>
+  </section>
+
+  <section id="clubs" class="section section-alt">
+    <div class="container">
+      <h2 class="reveal">The Clubs</h2>
+      <p class="reveal reveal-delay-1">These entirely student-led engineering clubs represent over 2% of the student body.</p>
+      <div class="card-grid">
+
+        <div class="card reveal reveal-delay-1" data-modal="modal-ucsp">
+          <div class="card-img">
+            <img src="assets/logos/ucsp/maroon_circle.png" alt="UChicago Space Program" style="max-height: 90px;">
+          </div>
+          <div class="card-body">
+            <h3>UChicago Space Program</h3>
+            <p>UChicago's fastest-growing engineering RSO, with 250+ members across three divisions: CubeSat, High Power Rocketry, and Science Instrumentation. PULSE-A, our flagship satellite, was selected by NASA for development. Your gift funds propulsion research, launch materials, and competition travel.</p>
+            <span class="card-link">Learn more</span>
+          </div>
+        </div>
+
+        <div class="card reveal reveal-delay-2" data-modal="modal-robotics">
+          <div class="card-img">
+            <img src="assets/logos/uchicago-robotics/robotics_logo.png" alt="UChicago Robotics">
+          </div>
+          <div class="card-body">
+            <h3>UChicago Robotics</h3>
+            <p>The University of Chicago's only robotics organization, competing in combat robotics (Robobrawl), autonomous maze-solving (Micromouse), and the University Rover Challenge. Open to all majors and experience levels. Your gift supports hardware, electronics, and competition entry fees.</p>
+            <span class="card-link">Learn more</span>
+          </div>
+        </div>
+
+        <div class="card reveal reveal-delay-3" data-modal="modal-fsae">
+          <div class="card-img">
+            <img src="assets/logos/uchicago-fsae/FSAE_Logo.png" alt="UChicago Formula SAE">
+          </div>
+          <div class="card-body">
+            <h3>UChicago Formula SAE</h3>
+            <p>Engineering a formula-style race car from the ground up. Your gift funds manufacturing, parts, and competition fees.</p>
+            <span class="card-link">Learn more</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="impact" class="section">
+    <div class="container">
+      <h2 class="reveal">Your Impact</h2>
+      <div class="stats">
+        <div class="stat reveal reveal-delay-1">
+          <span class="stat-number" data-count="25">$25</span>
+          <span class="stat-label">Funds a workshop kit</span>
+        </div>
+        <div class="stat reveal reveal-delay-2">
+          <span class="stat-number" data-count="150">$150</span>
+          <span class="stat-label">Covers competition entry</span>
+        </div>
+        <div class="stat reveal reveal-delay-3">
+          <span class="stat-number" data-count="500">$500</span>
+          <span class="stat-label">Sponsors a team trip</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="donate" class="section section-alt">
+    <div class="container donate-section">
+      <h2 class="reveal">Back the Builders</h2>
+      <p class="reveal reveal-delay-1">Every dollar goes directly to students — materials, hardware, launch fees, and competition travel. Pick a club and choose your amount.</p>
+      <div class="donate-grid">
+
+        <div class="donate-card reveal reveal-delay-1" data-club="space">
+          <div class="donate-card-logo">
+            <img src="assets/logos/ucsp/maroon_circle.png" alt="UChicago Space Program" style="max-height: 48px;">
+          </div>
+          <h3>Space Program</h3>
+          <p class="donate-card-tagline">Help launch UChicago's first satellite and fund the next rocket.</p>
+        </div>
+
+        <div class="donate-card reveal reveal-delay-2" data-club="robotics">
+          <div class="donate-card-logo">
+            <img src="assets/logos/uchicago-robotics/robotics_logo.png" alt="UChicago Robotics">
+          </div>
+          <h3>Robotics</h3>
+          <p class="donate-card-tagline">Power the motors, sensors, and travel that get robots to competition.</p>
+        </div>
+
+        <div class="donate-card reveal reveal-delay-3" data-club="fsae">
+          <div class="donate-card-logo">
+            <img src="assets/logos/uchicago-fsae/FSAE_Logo.png" alt="UChicago Formula SAE">
+          </div>
+          <h3>Formula SAE</h3>
+          <p class="donate-card-tagline">Fund parts, machining, and race fees to put UChicago on the track.</p>
+        </div>
+
+        <div class="donate-card donate-card-all reveal" data-club="all">
+          <h3>Support All Three</h3>
+          <p class="donate-card-tagline">Split your gift equally across Space Program, Robotics, and Formula SAE.</p>
+        </div>
+
+      </div>
+
+      <div class="donate-action reveal reveal-delay-3">
+        <div class="amount-chips">
+          <button class="amount-chip" data-amount="25">$25</button>
+          <button class="amount-chip selected" data-amount="50">$50</button>
+          <button class="amount-chip" data-amount="100">$100</button>
+          <button class="amount-chip" data-amount="250">$250</button>
+        </div>
+        <a href="#" class="btn btn-gold donate-cta">Give Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+
+  <div id="modal-ucsp" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-left">
+        <h2>UChicago Space Program</h2>
+        <p>The UChicago Space Program is an undergraduate-led aerospace organization and SEDS chapter founded in 2020. With over 250 members, it is the largest student-run engineering project on campus. Three divisions drive the work: the CubeSat Division is developing PULSE-A, UChicago's first undergraduate satellite — selected by NASA — which will demonstrate novel optical communications from space; the High Power Rocketry Division runs ~15 launches per year and trains members toward Level 1 and Level 2 certification through the Northern Illinois Rocketry Association; and the Science Instrumentation Division develops radio telescopes and scientific payloads. Beyond engineering, the club leads K-12 STEAM outreach at Chicago Public Schools and public astronomy nights on campus. Your support funds materials, launch fees, and travel to competitions like the Spaceport America Cup.</p>
+        <div class="modal-buttons">
+          <a href="https://www.uchicagospaceprogram.org/" target="_blank" class="btn btn-secondary">Learn more</a>
+          <a href="#donate" class="btn btn-primary modal-donate">Donate now</a>
+        </div>
+      </div>
+      <div class="modal-right">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="assets/images/ucsp-1-placeholder.svg" alt="UCSP photo 1">
+              <span class="carousel-caption">PULSE-A CubeSat components in assembly — UChicago's first undergraduate satellite, selected by NASA</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/images/ucsp-2-placeholder.svg" alt="UCSP photo 2">
+              <span class="carousel-caption">High Power Rocketry launch day with the Northern Illinois Rocketry Association</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/images/ucsp-3-placeholder.svg" alt="UCSP photo 3">
+              <span class="carousel-caption">Outreach at a UChicago Charter School STEAM Carnival</span>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev">&#8249;</button>
+          <button class="carousel-btn carousel-next">&#8250;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-robotics" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-left">
+        <h2>UChicago Robotics</h2>
+        <p>UChicago Robotics is the university's sole robotics RSO, dedicated to applying engineering and computer science to real-world challenges. The team competes across three tracks: Robobrawl, a BattleBots-style combat tournament at the University of Illinois where the team fields 30-pound combat robots; the All American Micromouse Competition, an autonomous maze-solving event hosted by IEEE at UCLA; and the University Rover Challenge, a Mars rover design competition held in Utah. Beyond competition, members mentor K-12 students through the Collegiate Scholars Program and support the Lab Schools' FIRST FRC team. The club is open to all students regardless of prior experience. Your gift funds motors, sensors, electronics, and competition travel.</p>
+        <div class="modal-buttons">
+          <a href="https://uchicagorobotics.webflow.io/" target="_blank" class="btn btn-secondary">Learn more</a>
+          <a href="#donate" class="btn btn-primary modal-donate">Donate now</a>
+        </div>
+      </div>
+      <div class="modal-right">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="assets/images/robotics-1-placeholder.svg" alt="Robotics photo 1">
+              <span class="carousel-caption">Combat robot "Kevin" competing at Robobrawl — built in 10 weeks for the team's inaugural competition</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/images/robotics-2-placeholder.svg" alt="Robotics photo 2">
+              <span class="carousel-caption">Autonomous Micromouse robot navigating a maze at the AAMC competition</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/images/robotics-3-placeholder.svg" alt="Robotics photo 3">
+              <span class="carousel-caption">Mentoring Lab Schools students at a FIRST FRC build session</span>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev">&#8249;</button>
+          <button class="carousel-btn carousel-next">&#8250;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-fsae" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-left">
+        <h2>UChicago Formula SAE</h2>
+        <p>UChicago Formula SAE engineers a formula-style race car from the ground up each year. The team tackles powertrain, suspension, aerodynamics, and manufacturing to compete against universities worldwide. Your gift funds raw materials, machining, parts, and competition registration.</p>
+        <div class="modal-buttons">
+          <a href="https://www.instagram.com/uchicagofsae/" target="_blank" class="btn btn-secondary">Learn more</a>
+          <a href="#donate" class="btn btn-primary modal-donate">Donate now</a>
+        </div>
+      </div>
+      <div class="modal-right">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="assets/images/fsae-1-placeholder.svg" alt="FSAE photo 1">
+              <span class="carousel-caption">Chassis fabrication in progress</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/images/fsae-2-placeholder.svg" alt="FSAE photo 2">
+              <span class="carousel-caption">Car on the track at competition</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/images/fsae-3-placeholder.svg" alt="FSAE photo 3">
+              <span class="carousel-caption">Engine testing in the garage</span>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev">&#8249;</button>
+          <button class="carousel-btn carousel-next">&#8250;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 University of Chicago Engineering Clubs</p>
+    </div>
+  </footer>
+
+  <script src="js/countdown.js"></script>
+  <script src="js/progress-particles.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/counters.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/donate.js"></script>
+</body>
+</html>
