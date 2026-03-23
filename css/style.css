@@ -837,6 +837,44 @@ img {
   }
 }
 
+/* --- Gallery Strip --- */
+.gallery-strip {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: galleryScroll 35s linear infinite;
+}
+
+.gallery-track:hover {
+  animation-play-state: paused;
+}
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 320px;
+  height: 210px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes galleryScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* --- Stats / Impact --- */
 .stats {
   display: flex;
