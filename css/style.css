@@ -848,7 +848,7 @@ img {
   display: flex;
   gap: 1rem;
   width: max-content;
-  animation: galleryScroll 35s linear infinite;
+  animation: galleryScroll 70s linear infinite;
 }
 
 .gallery-track:hover {
