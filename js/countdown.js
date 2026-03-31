@@ -1,6 +1,6 @@
 (function () {
-  // Giving Day ends: April 1, 2026 at 3:00 PM Central Time (UTC-5)
-  var deadline = new Date("2026-04-01T15:00:00-05:00").getTime();
+  // Giving Day ends: April 1, 2026 at 12:00 PM Central Time (CDT, UTC-5)
+  var deadline = new Date("2026-04-01T12:00:00-05:00").getTime();
 
   var daysEl = document.getElementById("cd-days");
   var hoursEl = document.getElementById("cd-hours");

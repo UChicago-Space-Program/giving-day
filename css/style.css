@@ -594,22 +594,33 @@ img {
   color: var(--maroon);
 }
 
-.card-link {
-  display: inline-block;
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: auto;
   padding-top: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+  gap: 1rem;
+}
+
+.card-link {
+  display: inline-block;
   color: var(--maroon);
   font-weight: 600;
   text-decoration: none;
-  border-top: 1px solid #e0e0e0;
   background: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
+  border: none;
   font-size: 1rem;
   cursor: pointer;
   text-align: left;
   font-family: inherit;
+}
+
+.card-give {
+  font-size: 0.9rem;
+  padding: 0.4rem 1.1rem;
+  white-space: nowrap;
 }
 
 .card-body p {
@@ -1001,6 +1012,59 @@ img {
 .amount-chip.selected {
   background: var(--maroon);
   color: var(--white);
+}
+
+.amount-custom {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--maroon);
+  border-radius: 999px;
+  padding: 0 0.85rem;
+  background: transparent;
+  transition: background 0.15s;
+}
+
+.amount-custom:focus-within {
+  background: var(--maroon);
+}
+
+.amount-custom-prefix {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--maroon);
+  transition: color 0.15s;
+}
+
+.amount-custom:focus-within .amount-custom-prefix {
+  color: var(--white);
+}
+
+.amount-custom-input {
+  width: 64px;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark);
+  padding: 0.4rem 0 0.4rem 0.1rem;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.amount-custom-input::-webkit-outer-spin-button,
+.amount-custom-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.amount-custom-input::placeholder {
+  color: var(--maroon);
+  opacity: 0.7;
+}
+
+.amount-custom:focus-within .amount-custom-input,
+.amount-custom:focus-within .amount-custom-input::placeholder {
+  color: var(--white);
+  opacity: 1;
 }
 
 .donate-action {
